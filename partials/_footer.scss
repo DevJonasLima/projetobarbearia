@@ -1,0 +1,72 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+.footer-icons{
+    display: flex;
+    gap: 8px;
+    color: $white-normal;
+}
+
+@media screen and (max-width: 768px) {
+    .footer p{
+        text-align: center;
+        margin:  0 auto;
+    }
+    
+    .footer-logo img {
+        width: 220px;
+    }
+}
+
+
+
+//---------------------
+//botao whatsapp
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 999;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    background-color: $primary-normal;
+    padding: 4px;
+    border-radius: 8px;
+    color: $white-normal;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}
